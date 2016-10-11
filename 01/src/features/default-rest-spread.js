@@ -36,4 +36,25 @@ export function es5() {
 }
 
 export function es6() {
+  function defaults(x = 12) {
+    return x
+  }
+
+  function rest(...x) {
+    return x.join(',')
+  }
+
+  function spread(x) { 
+    return sum(...x)
+  }
+
+  function sum(x=0, y=0, z=0) {
+    return x + y + z;
+  }
+
+  return {
+    defaults: defaults,
+    rest: rest,
+    spread: spread
+  }
 }
