@@ -1,12 +1,13 @@
 import $ from 'jquery'
 import Handlebars from 'handlebars'
 
+import {ENTER_KEY, ESCAPE_KEY} from './consts'
+
 Handlebars.registerHelper('eq', function(a, b, options) {
   return a === b ? options.fn(this) : options.inverse(this)
 })
 
-var ENTER_KEY = 13;
-var ESCAPE_KEY = 27;
+
 
 var util = {
   uuid: function() {
