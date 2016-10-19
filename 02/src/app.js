@@ -2,45 +2,15 @@ import $ from 'jquery'
 import Handlebars from 'handlebars'
 
 import {ENTER_KEY, ESCAPE_KEY} from './consts'
+import {uuid, pluralize, store} from './util'
 
 Handlebars.registerHelper('eq', function(a, b, options) {
   return a === b ? options.fn(this) : options.inverse(this)
 })
 
-
-
-var util = {
-  uuid: function() {
-    /*jshint bitwise:false */
-    var i, random;
-    var uuid = '';
-
-    for (i = 0; i < 32; i++) {
-      random = Math.random() * 16 | 0;
-      if (i === 8 || i === 12 || i === 16 || i === 20) {
-        uuid += '-';
-      }
-      uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(16);
-    }
-
-    return uuid;
-  },
-  pluralize: function(count, word) {
-    return count === 1 ? word : word + 's';
-  },
-  store: function(namespace, data) {
-    if (arguments.length > 1) {
-      return localStorage.setItem(namespace, JSON.stringify(data));
-    } else {
-      var store = localStorage.getItem(namespace);
-      return (store && JSON.parse(store)) || [];
-    }
-  }
-};
-
 var App = {
   init: function() {
-    this.todos = util.store('todos-jquery');
+    this.todos = store('todos-jquery');
     this.cacheElements();
     this.bindEvents();
 
@@ -82,14 +52,14 @@ var App = {
     this.$toggleAll.prop('checked', this.getActiveTodos().length === 0);
     this.renderFooter();
     this.$newTodo.focus();
-    util.store('todos-jquery', this.todos);
+    store('todos-jquery', this.todos);
   },
   renderFooter: function() {
     var todoCount = this.todos.length;
     var activeTodoCount = this.getActiveTodos().length;
     var template = this.footerTemplate({
       activeTodoCount: activeTodoCount,
-      activeTodoWord: util.pluralize(activeTodoCount, 'item'),
+      activeTodoWord: pluralize(activeTodoCount, 'item'),
       completedTodos: todoCount - activeTodoCount,
       filter: this.filter
     });
@@ -153,7 +123,7 @@ var App = {
     }
 
     this.todos.push({
-      id: util.uuid(),
+      id: uuid(),
       title: val,
       completed: false
     });
