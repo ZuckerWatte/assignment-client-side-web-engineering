@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+body {
+  font-family: 'Slabo 27px', serif;
+  padding: 1.5em;
+}
+
+a {
+  display: block;
+  padding: 1em 0;
+  color: #006896;
+}
+
+span {
+  padding: 0.2em;
+  font-size: 1.2em;
+}
+
+h1, 
+.drink {
+  display: inline;
+}
+
+h1 {
+  margin-right: 0.5em;
+}
+
+button {
+  border: none;
+  border-radius: none;
+  background-color: #006896;
+  color: #fff;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.drink-selection {
+  opacity: 0;
+}
+
+.add-drinks {
+  display: block;
+  margin: 3em 0 2em;
+}
+
+.remove-drinks {
+  opacity: 0;
+}
+
+.me-like {
+  height: 2em;
+  font-style: italic;
+}
+
+.drinks-counter,
+.vomits-counter {
+  display: none;
+}
+
+.vomits-counter {
+  margin-bottom: 0.5em;
+}
+
+.show {
+  display: block; 
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
+
+.warning {
+  color: #F95658;
+}
