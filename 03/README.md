@@ -1,13 +1,8 @@
-# 02-modules
+### Choo Micro Application    
 
-## Setup
+🍺🍷🙋🙊
 
-```bash
-npm install
+start with:    
 ```
-
-## Dev
-
-```bash
-npm start
+budo client.js -p 8080 --open -- -t es2020
 ```
