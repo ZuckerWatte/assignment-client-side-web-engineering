@@ -26,7 +26,15 @@ module.exports = function(grunt) {
         },
         options: {
           transform: ['hbsfy', 'babelify', 'uglifyify']
-        }
+        },
+      },
+      bundle: {
+        files: {
+          './dist/bundle.js': ['./src/client.js']
+        },
+        options: {
+          transform: ['hbsfy', 'babelify', 'uglifyify']
+        },
       }
     },
 
@@ -118,7 +126,7 @@ module.exports = function(grunt) {
     }
   })
 
-  grunt.registerTask('default', ['clean', 'copy', 'browserify:dist'])
+  grunt.registerTask('default', ['clean', 'copy', 'browserify:dist', 'browserify:bundle'])
   grunt.registerTask('start', ['default', 'connect', 'watch'])
 
 }
