@@ -1,6 +1,20 @@
+
+
 # 04-chess
 
 > When you see a good move, look for a better one
+
+## Current Progress
+* chessboard is currently working in development inside src directory
+* multiplayer mode not correctly working by now
+### setup
+```bash
+npm install
+```
+### start 
+```bash
+node app
+```
 
 ## Assignment
 
