@@ -31,5 +31,13 @@
     "socket.io-client": "^1.5.1",
     "time-grunt": "^1.2.1",
     "uglifyify": "^3.0.4"
+  },
+  "dependencies": {
+    "bufferutil": "^1.2.1",
+    "chess.js": "^0.10.2",
+    "chessboardjs": "0.0.1",
+    "express": "^4.14.0",
+    "socket.io": "^1.6.0",
+    "utf-8-validate": "^1.2.1"
   }
 }
