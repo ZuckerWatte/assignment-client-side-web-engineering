@@ -1,0 +1,49 @@
+{
+ "manifest_version": 2,
+ "name": "Wikipedia Giphy Downloader",
+ "description": "This extension searches for the two most common words in an Wikipedia Article and fetches all matching search results from giphy.com",
+ "version": "1.0.0",
+ "browser_action": {
+   "default_icon": {
+     "19": "assets/icons/giphy19.png",
+     "38": "assets/icons/giphy38.png"
+   },
+   "default_popup": "popup.html",
+   "default_title": "Extension Example"
+ },
+ "background": {
+   "scripts": [
+     "scripts/background.js"
+   ],
+   "persistent": false
+ },
+ "icons": {
+   "16": "assets/icons/giphy16.png",
+   "48": "assets/icons/giphy48.png",
+   "128": "assets/icons/giphy128.png"
+ },
+ "permissions": [
+   "downloads",
+   "downloads.shelf",
+   "notifications",
+   "storage",
+   "activeTab",
+   "https://giphy.com/*", 
+   "http://giphy.com/*"
+ ],
+ "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+ "content_scripts": [
+   {
+     "matches": [
+       "https://en.wikipedia.org/*",
+       "http://en.wikipedia.org/*"
+     ],
+     "css": [
+       "assets/css/content.css"
+     ],
+     "js": [
+       "scripts/content.js"
+     ]
+   }
+ ]
+}

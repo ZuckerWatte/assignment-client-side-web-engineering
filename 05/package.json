@@ -1,0 +1,29 @@
+{
+  "name": "giphydownloader",
+  "version": "1.0.0",
+  "description": "chrome extension for downloading gifs from giphy",
+  "main": "scripts/content.js",
+  "scripts": {
+    "test": "''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "''"
+  },
+  "keywords": [
+    "''"
+  ],
+  "author": "Mona",
+  "license": "(MIT)",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "mark.js": "github:julmot/mark.js"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

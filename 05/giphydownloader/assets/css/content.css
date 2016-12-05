@@ -1,0 +1,11 @@
+mark {
+  color: black;
+}
+
+mark.first {
+    background: #2AFC9C;
+}
+
+mark.second {
+    background: #FB6769;
+}
