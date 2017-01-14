@@ -10,6 +10,20 @@ module.exports = (state, prev, send) => html`
         <div class="col-12 px2 mx-auto">
           <div class="clearfix mxn2">
             <div class="col-12 px2 mx-auto">
+              <svg viewBox="0 0 600 300">
+                <symbol id="dash-text">
+                  <text text-anchor="middle" x="50%" y="50%" dy=".35em">Xylophon</text>
+                </symbol>
+                <use xlink:href="#dash-text" class="dash-text"/>
+                <use xlink:href="#dash-text" class="dash-text"/>
+                <use xlink:href="#dash-text" class="dash-text"/>
+                <use xlink:href="#dash-text" class="dash-text"/>
+                <use xlink:href="#dash-text" class="dash-text"/>
+              </svg>
+            </div>
+          </div>
+          <div class="clearfix mxn2">
+            <div class="col-12 px2 mx-auto">
               <iframe height='547' scrolling='no' title='Shaded Text' src='//codepen.io/rgg/embed/ozLzbz/?height=547&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/rgg/pen/ozLzbz/'>Shaded Text</a> by Rafael González (<a href='http://codepen.io/rgg'>@rgg</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
             </div>
           </div>
