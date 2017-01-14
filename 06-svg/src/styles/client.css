@@ -9,19 +9,20 @@ hr {
   border-top: 1px solid #f0f0f0;
 }
 
-/* Styles */
-.style-gradient1 {
-  fill: url(#gradient1);
+svg {
+  display: block;
+  margin: 0 auto;
 }
 
-.style-radialGradientyellow {
-  fill: url(#radialGradientyellow);
+/* Styles Gradients */
+.style-linearGradientyellow {
+  fill: url(#linearGradientyellow);
   stroke: #f9d245;
   stroke-width: 1;
 }
 
-.style-radialGradientred {
-  fill: url(#radialGradientred);
+.style-linearGradientred {
+  fill: url(#linearGradientred);
   stroke: #f27365;
   stroke-width: 1;
 }
@@ -32,50 +33,154 @@ hr {
   stroke-width: 1;
 }
 
-
-#pattern1 rect {
-  fill: #ff0000;
+.style-radialGradientgreen {
+  fill: url(#radialGradientgreen);
+  stroke: #68f286;
+  stroke-width: 1;
 }
 
-#pattern1 line {
-  stroke: #0000ff;
+/* Animation Bouncing Balls */
+.animation-circle{
+  animation: bounce 0.5s ease-in-out infinite alternate;
 }
 
-.style-pattern1 {
-  fill: url(#pattern1);
+.delay-1 {
+  animation-delay: 0.2s;
 }
 
-/* Animation */
+.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.delay-3 {
+  animation-delay: 0.85s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0px)
+  }
+  100% {
+    transform: translate(0,80px)
+  }
+}
+
+
+/* Styles Snowflake Animation */
+.snowflake-animation {
+  width: 120px;
+  height: 135px;
+  padding: 75px 15%;
+}
+
+.snowflake {
+  fill: url(#radialGradientlightblue);
+  stroke: #78d1e8;
+  stroke-width: 3px;
+  stroke-linejoin: round; 
+  stroke-linecap: round; 
+  stroke-dasharray: 1200; 
+  stroke-dashoffset: 1200;
+  animation: draw 7s infinite;
+}
+ 
+ @keyframes draw {
+  50% {
+    stroke-dashoffset: 0;
+  } 
+}
+
+
+/* Animation Pattern */
+.pattern-bg {
+  fill: url(#radialGradientlightred);
+}
+
+.pattern-animation-bg {
+  background-color: #fcd5d1;
+  height: 300px;
+  width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#pattern1 circle.element0 {
+  stroke: #ffcec7;
+  animation: stroke-width 2s ease-in-out infinite alternate;
+  animation-delay: 0.5s;
+}
+
+#pattern1 circle.element1 {
+  stroke: #fca399;
+  animation: stroke-width 2s ease-in-out infinite alternate;
+  animation-delay: 0.75s;
+}
+
+#pattern1 circle.element2 {
+  stroke: #f27365;
+  animation: stroke-width 2s ease-in-out infinite alternate;
+  animation-delay: 1s;
+}
+
+#pattern1 circle.element3 {
+  stroke: #ea4a38;
+  animation: stroke-width 2s ease-in-out infinite alternate;
+  animation-delay: 1.25s;
+}
+
+#pattern1 circle.element0,
+#pattern1 circle.element1,
+#pattern1 circle.element2,
+#pattern1 circle.element3 {
+  fill: transparent;
+  stroke-width: 0.5px;
+}
+
 .animation-pattern1 {
   fill: url(#pattern1);
-  animation: fill-opacity 2s ease-in-out infinite alternate;
 }
 
-@keyframes fill-opacity {
-  0% {
-    fill-opacity: 0.0;
-  }
-  100% {
-    fill-opacity: 1.0;
-  }
-}
-
-.animation-pattern2 {
-  fill: url(#pattern1);
-  width: 50%;
-  animation: byebye 2s ease infinite;
-}
-
-@keyframes byebye {
-  0% {
-    width: 50%;
-  }
+ @keyframes stroke-width {
   50% {
-    width: 100%;
-    fill-opacity: 1.0;
-  }
+    stroke-width: 2px;
+  } 
+}
+
+
+/* Animation Text */
+.dash-text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 50 300;
+  stroke-dashoffset: 0;
+  animation: stroke 6s infinite linear;
+  font-size: 4em;
+}
+
+.dash-text:nth-child(5n + 1) {
+  stroke: #f95b4d;
+  animation-delay: -1.2s;
+}
+
+.dash-text:nth-child(5n + 2) {
+  stroke: #ffe14f;
+  animation-delay: -2.4s;
+}
+
+.dash-text:nth-child(5n + 3) {
+  stroke: #68f286;
+  animation-delay: -3.6s;
+}
+
+.dash-text:nth-child(5n + 4) {
+  stroke: #59dcf7;
+  animation-delay: -4.8s;
+}
+
+
+@keyframes stroke {
   100% {
-    width: 100%;
-    fill-opacity: 0.0;
+    stroke-dashoffset: -350;
   }
 }
