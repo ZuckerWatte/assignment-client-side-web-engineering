@@ -11,9 +11,9 @@ module.exports = (state, prev, send) => html`
           <div class="clearfix mxn2">
             <div class="col-12 px2 mx-auto">
               <svg height="150">
-                <rect x="90" y="15" width="120" height="120" class="style-radialGradientred"/>          
+                <rect x="90" y="15" width="120" height="120" class="style-linearGradientred"/>          
                 <defs>
-                  <linearGradient id="radialGradientred"  x1="80" y1="5" x2="210" y2="130" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="linearGradientred"  x1="80" y1="5" x2="210" y2="130" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#fca399" offset="0"/>
                     <stop stop-color="#f78c80" offset="10%"/>
                     <stop stop-color="#f27365" offset="20%"/>
@@ -55,9 +55,9 @@ module.exports = (state, prev, send) => html`
           <div class="clearfix mxn2">
             <div class="col-12 px2 mx-auto">
               <svg height="150">
-                <polygon points="150,15 75,130, 225,130" class="style-radialGradientyellow"/>              
+                <polygon points="150,15 75,130, 225,130" class="style-linearGradientyellow"/>              
                 <defs>
-                  <linearGradient id="radialGradientyellow" x1="80" y1="30" x2="215" y2="110" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="linearGradientyellow" x1="80" y1="30" x2="215" y2="110" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#fff5af" offset="0"/>
                     <stop stop-color="#fff093" offset="10%"/>
                     <stop stop-color="#ffe760" offset="20%"/>
