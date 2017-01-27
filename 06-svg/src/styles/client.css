@@ -152,35 +152,35 @@ svg {
   fill: none;
   stroke-width: 3;
   stroke-linejoin: round;
-  stroke-dasharray: 50 300;
+  stroke-dasharray: 10 30;
   stroke-dashoffset: 0;
-  animation: stroke 6s infinite linear;
+  animation: stroke 4s infinite linear;
   font-size: 4em;
 }
 
-.dash-text:nth-child(5n + 1) {
+.dash-text:nth-child(2) {
   stroke: #f95b4d;
-  animation-delay: -1.2s;
+  animation-delay: -0.5s;
 }
 
-.dash-text:nth-child(5n + 2) {
+.dash-text:nth-child(3) {
   stroke: #ffe14f;
-  animation-delay: -2.4s;
+  animation-delay: -1s;
 }
 
-.dash-text:nth-child(5n + 3) {
+.dash-text:nth-child(4) {
   stroke: #68f286;
-  animation-delay: -3.6s;
+  animation-delay: -1.5s;
 }
 
-.dash-text:nth-child(5n + 4) {
+.dash-text:nth-child(5) {
   stroke: #59dcf7;
-  animation-delay: -4.8s;
+  animation-delay: -2s;
 }
 
 
 @keyframes stroke {
   100% {
-    stroke-dashoffset: -350;
+    stroke-dashoffset: 240;
   }
 }

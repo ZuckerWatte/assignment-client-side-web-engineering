@@ -12,7 +12,7 @@ module.exports = (state, prev, send) => html`
             <div class="col-12 px2 mx-auto">
               <svg viewBox="0 0 600 300">
                 <symbol id="dash-text">
-                  <text text-anchor="middle" x="50%" y="50%" dy=".35em">Xylophon</text>
+                  <text text-anchor="middle" x="50%" y="50%" dy=".35em">Happy Birthday!</text>
                 </symbol>
                 <use xlink:href="#dash-text" class="dash-text"/>
                 <use xlink:href="#dash-text" class="dash-text"/>
