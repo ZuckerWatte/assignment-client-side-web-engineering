@@ -192,7 +192,7 @@ svg {
   transform-origin: 50% 50%;
 }
 .inner:hover {
-  fill:#fca399;
+  fill:#eb9288;
   transition: transform 0.3s ease-in-out;
   transform: scale(1.02);
 }
