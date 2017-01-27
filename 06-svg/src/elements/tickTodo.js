@@ -15,10 +15,8 @@ module.exports = {
       else if (state.clickCount+1 === 3) {
         state.inactive_complete = 'inactive'
         state.inactive_progress = 'inactive'
-      } 
-      else if (state.clickCount+1 === 4) {
         state.clickCount = -1
-      }
+      } 
       else {
         state.inactive_complete = ''
       }

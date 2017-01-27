@@ -189,6 +189,12 @@ svg {
 .inner {
   fill:#fca399;
   cursor: pointer;
+  transform-origin: 50% 50%;
+}
+.inner:hover {
+  fill:#fca399;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.02);
 }
 .petal {
   transform-origin: 50% 50%;
