@@ -6,11 +6,7 @@ const app = choo()
 
 app.use(log())
 
-app.model({
-  namespace: 'data',
-  state: {},
-  reducers: {}
-})
+app.model(require('./elements/tickTodo'))
 
 app.router(route => [
   route('/', require('./pages/main')),
